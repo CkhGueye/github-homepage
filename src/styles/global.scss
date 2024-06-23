@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+@import "./reset";
+@import "./all";
+
+:root {
+  font-size: 10px;
+  --spacing: 8px;
+  --spacingx2: 16px;
+  --radius: 6px;
+  --black: #24292f;
+  --white: #ffffff;
+  --grey: #57606a;
+  --grey2: rgb(110, 118, 129);
+  --light-grey: #d0d7de;
+  --blue: #0969da;
+  --white-darker: #f6f8fa;
+  --purple: #6e40c9;
+  --pink: #dd7df7;
+  --green: #7ee787;
+  --border-color: rgb(48, 54, 61);
+  --red: rgb(255, 162, 139);
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  background: url("../assets/bg.png");
+  background-repeat: no-repeat;
+  background-color: #0d1116;
+  color: var(--white);
+}
+
+.container {
+  padding-inline: var(--spacingx2);
+  margin-inline: auto;
+  max-width: 128rem;
+  @include onDesktop {
+    p {
+      max-width: 85%;
+    }
+  }
+}
+
+a {
+  .arrow-symbol-mktg {
+    @include transformX(-2px);
+  }
+  .octicon-chevrow-stem {
+    stroke-width: 0;
+    transition: 0.2s;
+  }
+  &:hover {
+    .arrow-symbol-mktg {
+      @include transformX(0);
+    }
+    .octicon-chevrow-stem {
+      stroke-width: 1.5;
+    }
+  }
+}
+
+.text-md {
+  font-size: 2.4rem;
+  color: rgba(#fff, 0.5);
+  font-weight: 400;
+  margin-bottom: spacing(3);
+  span {
+    color: var(--white);
+  }
+  @include onTablet {
+    font-size: 2rem;
+  }
+}
+
+.statement {
+  margin-top: spacing(2);
+  .animatedLine-line {
+    transition-delay: 500ms;
+  }
+  .content {
+    margin-top: 0;
+  }
+  h2 {
+    font-size: 2.4rem;
+    margin-bottom: spacing(1);
+    transition-delay: 200ms !important;
+    @include onMobile {
+      font-size: 2rem;
+    }
+  }
+  p {
+    font-size: 4.8rem;
+    @include onMobile {
+      font-size: 2.8rem;
+    }
+  }
+}

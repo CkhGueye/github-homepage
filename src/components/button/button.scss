@@ -1,0 +1,47 @@
+@import "../../styles/all";
+
+.button {
+  background-color: transparent;
+  border-radius: spacing(1);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: spacing(0.5);
+  border: unset;
+  font-size: 16px;
+  padding: spacing(1);
+  cursor: pointer;
+
+  svg {
+    fill: var(--white);
+    @include transformY(-2px);
+  }
+
+  &:hover svg {
+    @include resetTransform;
+  }
+
+  @include onTablet {
+    &[aria-expanded] {
+      color: var(--black);
+      font-size: 2rem;
+      padding-block: spacing(1.5);
+      justify-content: space-between;
+      width: 100%;
+      svg {
+        fill: var(--black);
+        scale: 1.5;
+        rotate: -90deg;
+        transform: unset;
+      }
+    }
+    &[aria-expanded="true"] svg {
+      rotate: 0deg;
+    }
+  }
+}
+
+.bordered {
+  border: 1px solid;
+}

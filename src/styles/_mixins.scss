@@ -1,0 +1,68 @@
+/************************** Breackpoint ********************************/
+// mobile
+@mixin onMobile {
+  @media (max-width: 600px) {
+      @content;
+  }
+}
+
+// Tablet
+@mixin onTablet {
+  @media (max-width: 900px) {
+      @content;
+  }
+}
+
+// Desktop
+@mixin onDesktop {
+  @media (min-width: 901px) {
+      @content;
+  }
+}
+/************************** Transform ********************************/
+// AnimationDuration
+@mixin animationDuration($val) {
+  transition: #{$val}ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+// TransformY
+@mixin transformY($y) {
+  transform: translateY($y);
+  @include animationDuration(500);
+}
+
+// TransformX
+@mixin transformX($x) {
+  transform: translateX($x);
+  @include animationDuration(500);
+}
+
+// ScaleTransformY
+@mixin scaleTransformY($x,$y) {
+  transform: scale($x) translateY($y);
+  @include animationDuration(500);
+}
+
+// ScaleTransformY
+@mixin resetTransform {
+  transform: scale(1) translateY(0);
+}
+
+/************************** Hide/Show ********************************/
+// hided
+@mixin hided {
+  visibility: hidden;
+  opacity: 0;
+}
+
+// shown
+@mixin shown {
+  visibility: visible;
+  opacity: 1;
+}
+
+/************************** Spacing ********************************/
+$spacing: 0.8rem;
+@function spacing($val) {
+  @return $val * 0.8rem
+}

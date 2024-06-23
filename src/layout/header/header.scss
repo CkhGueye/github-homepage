@@ -1,0 +1,77 @@
+@import "../../styles/all.scss";
+
+header {
+  padding-block: var(--spacingx2);
+  & > div {
+    display: flex;
+    gap: spacing(2);
+    @include onTablet {
+      justify-content: space-between;
+    }
+  }
+  .menu-container {
+    display: flex;
+    flex: 1;
+    @include onTablet {
+      @include hided;
+      transform-origin: top right;
+      @include scaleTransformY(0.9, -24px);
+      margin-top: spacing(2);
+      background-color: var(--white);
+      border-radius: spacing(1);
+      align-self: flex-end;
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: spacing(2);
+      gap: spacing(1);
+      overflow: auto;
+    }
+  }
+  .logo {
+    svg {
+      fill: var(--white);
+    }
+  }
+  nav {
+    flex: 1;
+  }
+  .menu-wrapper {
+    display: flex;
+    flex: 1;
+    z-index: 2;
+    @include onTablet {
+      backdrop-filter: blur(2px);
+      background-color: rgba(0, 0, 0, 0.5);
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 45px;
+      @include hided;
+      .sign-in {
+        background-color: var(--black);
+        color: var(--white);
+        height: 4rem;
+        text-align: center;
+      }
+    }
+  }
+  &.menu-opened {
+    .menu-wrapper {
+      @include shown;
+    }
+    .menu-container {
+      @include shown;
+      @include resetTransform;
+    }
+  }
+  .bordered {
+    @include onTablet {
+      order: -1;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../styles/all";
+
+.link {
+  font-size: 2rem;
+  font-weight: 500;
+  display: inline-flex;
+  gap: spacing(1);
+  align-items: center;
+  position: relative;
+  @include onTablet {
+    font-size: 2rem;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: calc(100% - 1em);
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    pointer-events: none;
+    @include animationDuration(300);
+  }
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &.btnlink {
+    border-radius: spacing(0.5);
+    background-color: var(--white);
+    color: var(--black);
+    padding: spacing(1.5) spacing(3);
+    border: 1px solid var(--white);
+    &::before {
+      content: unset;
+    }
+    &.outline {
+      background-color: transparent;
+      color: var(--white);
+      //border-color: var(--white);
+    }
+  }
+}

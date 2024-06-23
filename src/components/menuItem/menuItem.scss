@@ -1,0 +1,60 @@
+@import "../../styles/all";
+
+.dropdown {
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: spacing(1);
+  box-shadow: rgba(27, 31, 35, 0.1) 0px 5px 30px 0px,
+    rgba(27, 31, 35, 0.4) 0px 0px 1px 0px,
+    rgba(27, 31, 35, 0.15) 0px 1px 2px 0px;
+  display: flex;
+  max-width: 50rem;
+  padding: spacing(3);
+  position: absolute;
+  @include scaleTransformY(0.99, -0.8rem);
+  @include hided;
+  z-index: 1;
+  &:hover {
+    @include shown;
+    @include resetTransform;
+  }
+  
+  @include onTablet {
+    position: relative;
+    flex-direction: column;
+    box-shadow: unset;
+    @include resetTransform;
+    display: none;
+    padding-block: spacing(1);
+  }
+  
+  .extra {
+    &+ul {
+      margin-top: spacing(3);
+    }
+    @include onDesktop {
+      border-right: 1px solid var(--light-grey);
+      padding-right: 4.8rem;
+      & + ul {
+        margin-top: 0;
+        padding-left: spacing(3);
+      }
+    }
+  }
+
+  .list li:first-child {
+    margin-block: spacing(1);
+  }
+
+  &.column {
+    flex-direction: column;
+    gap: spacing(2);
+    max-width: 30rem;
+    .list {
+      border-bottom: 1px solid var(--light-grey);
+      padding-bottom: spacing(2);
+    }
+  }
+
+}
+

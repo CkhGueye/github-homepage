@@ -1,0 +1,40 @@
+@import "../../styles/all";
+
+.button-menu {
+  background: unset;
+  border: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  gap: spacing(0.5);
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  display: none;
+  @include onTablet {
+    display: flex;
+  }
+  span {
+    background-color: var(--white);
+    height: 3px;
+    width: 30px;
+    border-radius: 2rem;
+    display: inline-block;
+    transition: 500ms;
+  }
+  &[aria-expanded="true"] {
+    span {
+      position: absolute;
+      &:nth-child(2) {
+        display: none;
+      }
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

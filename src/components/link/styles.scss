@@ -1,0 +1,43 @@
+@import "../../styles/all";
+
+.dropdownMenuItem {
+  display: flex;
+  gap: spacing(2);
+  padding-block: spacing(1);
+  color: var(--grey);
+  font-size: 1.4rem;
+  cursor: pointer;
+
+  svg {
+    fill: currentColor;
+  }
+
+  span {
+    font-size: 1.6rem;
+    display: block;
+    color: var(--black);
+    font-weight: 500;
+  }
+
+  &.secondary {
+    gap: spacing(0.5);
+    svg {
+      opacity: 0;
+      @include transformX(- spacing(0.5))
+    }
+  }
+
+  &:hover {
+    color: var(--blue);
+    span {
+      color: inherit;
+    }
+
+    &.secondary {
+      svg {
+        opacity: 1;
+        @include resetTransform;
+      }
+    }
+  }
+}
