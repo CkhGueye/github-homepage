@@ -12,4 +12,5 @@ export default defineConfig({
       },
     },
   },
+  base: "https://ckhgueye.github.io/github-homepage"
 })
