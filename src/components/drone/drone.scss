@@ -1,0 +1,22 @@
+.drone {
+  display: flex;
+  justify-content: flex-end;
+  padding-block: 5rem;
+  @include onTablet {
+    margin-top: 20rem;
+  }
+  img {
+    width: auto;
+    max-height: 18.5rem;
+    animation: 2s flotting infinite alternate ease-in-out;
+  }
+}
+
+@keyframes flotting {
+  0% {
+    translate: 0 5px;
+  }
+  100% {
+    translate: 0 -5px;
+  }
+}

@@ -1,0 +1,119 @@
+.hero {
+  margin-top: 10rem;
+  @include onTablet {
+    margin-top: unset;
+  }
+  &-btn {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: spacing(5);
+    padding: spacing(2);
+    background-color: rgba(#000, 0.65);
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      gap: spacing(2);
+      svg:first-child {
+        flex: 0 0 4rem;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        color: var(--grey2);
+      }
+    }
+    span:first-child {
+      color: var(--white);
+      font-weight: bold;
+    }
+  }
+  h1 {
+    font-size: 7.2rem;
+    margin-block: spacing(8) spacing(1);
+    @include onMobile {
+      font-size: 4.8rem;
+    }
+  }
+  p {
+    color: var(--grey2);
+    font-size: 3.2rem;
+    margin-bottom: spacing(4);
+    @include onMobile {
+      font-size: 2.4rem;
+    }
+  }
+  &-action {
+    display: flex;
+    gap: spacing(2);
+    @include onTablet {
+      flex-direction: column;
+    }
+    div {
+      background-color: var(--grey2);
+      width: 1px;
+      @include onTablet {
+        width: auto;
+        height: 1px;
+      }
+    }
+    a {
+      padding: spacing(1.5) spacing(3);
+      box-shadow: #bc8cff 0 0 0 1px inset;
+      border: 0.1rem solid var(--purple);
+      border-radius: spacing(0.5);
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: spacing(1);
+      &:hover {
+        border: 0.1rem solid var(--white);
+      }
+    }
+  }
+  &-trustedBy {
+    margin-block: spacing(10);
+    @include onTablet {
+      margin-block: spacing(5);
+    }
+    p {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: spacing(2);
+      padding-block: spacing(3);
+      @include onTablet {
+        justify-content: space-around;
+      }
+    }
+  }
+  .animatedLine {
+    &-img {
+      translate: 2.6rem;
+      @include onTablet {
+        translate: 0.7rem;
+      }
+    }
+    &-svgWrapper {
+      transform: unset;
+    }
+    &-line {
+      transform: unset;
+      background: linear-gradient(
+        #d2a8ff,
+        #a371f7 10%,
+        #196c2e 70%,
+        #2ea043 80%,
+        #56d364
+      );
+    }
+  }
+}
+
+.withline {
+  display: flex;
+}

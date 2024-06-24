@@ -1,0 +1,66 @@
+.animatedLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: spacing(2);
+  width: 8rem;
+  flex: 0 0 auto;
+  position: relative;
+  @include onTablet {
+    width: 4rem;
+    & + .content {
+      padding-left: spacing(2);
+    }
+  }
+  &-img {
+    align-self: flex-start;
+    z-index: -1;
+    &.witharc {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 50%;
+    }
+  }
+  &-svgWrapper {
+    transform: scale(0);
+    transition-delay: 100ms;
+    &::before {
+      content: "";
+      background-color: var(--pink);
+      filter: blur(1.8rem);
+      height: 24px;
+      width: 24px;
+      display: block;
+      position: absolute;
+    }
+    svg {
+      fill: var(--white);
+    }
+  }
+  &-line {
+    background: linear-gradient(
+      #d2a8ff,
+      #a371f7 10%,
+      #196c2e 70%,
+      #2ea043 80%,
+      #56d364
+    );
+    flex: 1;
+    width: 3px;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+.visible {
+  .animatedLine {
+    &-svgWrapper {
+      transform: scale(1);
+    }
+    &-line {
+      transform: scaleY(1);
+    }
+  }
+}
