@@ -1,16 +1,14 @@
-@import "../../styles/all";
-
 form.search {
-  background-color: rgba(46,55,74,.82);
+  background-color: rgba(46, 55, 74, 0.82);
   border-radius: var(--radius);
   display: flex;
   align-items: center;
   padding-inline: var(--spacing);
   max-width: 24rem;
   @include onTablet {
-      background-color: var(--white-darker);
-      border: 1px solid rgb(216, 222, 228);
-      max-width: unset;
+    background-color: var(--white-darker);
+    border: 1px solid rgb(216, 222, 228);
+    max-width: unset;
   }
   label {
     flex: 1;
