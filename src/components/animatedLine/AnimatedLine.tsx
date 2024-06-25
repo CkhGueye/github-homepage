@@ -1,7 +1,7 @@
 import "./animatedLine.scss";
 
 type animatedLineProps = {
-  children: JSX.Element;
+  children?: JSX.Element;
   svgIcon: React.ReactNode;
 };
 

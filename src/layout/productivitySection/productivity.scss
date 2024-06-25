@@ -1,0 +1,15 @@
+.productivity {
+  .animatedLine {
+    &-svgWrapper::before {
+      background-color: var(--green);
+    }
+    &-line {
+      background: linear-gradient(#56d364, #2ea043, transparent);
+    }
+  }
+  p {
+    span {
+      color: var(--green);
+    }
+  }
+}

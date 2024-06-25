@@ -1,0 +1,65 @@
+.animatate-block {
+  .line-line {
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .line-svgWrapper {
+    transform: scale(0);
+    transition-delay: 100ms;
+  }
+  .content {
+    margin-block: 10rem;
+    @include onTablet {
+      margin-block: 5rem;
+    }
+    * {
+      opacity: 0;
+      transform: translateX(-15px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transition-delay: 300ms;
+    }
+  }
+  &.visible {
+    .line-line {
+      transform: scaleY(1);
+    }
+    .line-svgWrapper {
+      transform: scale(1);
+    }
+    .content {
+      * {
+        opacity: 1;
+        transform: translateX(0) !important;
+      }
+      .delay-200ms {
+        transition-delay: 200ms;
+      }
+    }
+  }
+}
+
+.statement {
+  margin-top: spacing(2);
+  .animatedLine-line {
+    transition-delay: 500ms;
+  }
+  .content {
+    margin-top: 0;
+  }
+  h2 {
+    font-size: 2.4rem;
+    margin-bottom: spacing(1);
+    transition-delay: 200ms !important;
+    @include onMobile {
+      font-size: 2rem;
+    }
+  }
+  p {
+    font-size: 4.8rem;
+    @include onMobile {
+      font-size: 2.8rem;
+    }
+  }
+}
