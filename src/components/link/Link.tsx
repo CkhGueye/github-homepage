@@ -4,11 +4,11 @@ import "./link.scss";
 type linkProps = {
   to: string;
   children: React.ReactNode;
-  outline: string;
+  type?: "btn" | "btn-outline";
 };
 
-export default function Link({ to, children, outline }: linkProps) {
-  const cName = outline ? "btnlink outline" : "btnlink";
+export default function Link({ to, children, type }: linkProps) {
+  const cName = type ? type : "";
   return (
     <a href={to} className={`${cName} link`}>
       {children}

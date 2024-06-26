@@ -27,7 +27,7 @@
     }
   }
 
-  &.btnlink {
+  &.btn {
     border-radius: spacing(0.5);
     background-color: var(--white);
     color: var(--black);
@@ -36,10 +36,10 @@
     &::before {
       content: unset;
     }
-    &.outline {
+    &-outline {
+      @extend .btn;
       background-color: transparent;
       color: var(--white);
-      //border-color: var(--white);
     }
   }
 }

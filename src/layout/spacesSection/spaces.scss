@@ -1,0 +1,43 @@
+.spaces {
+  .content {
+    position: relative;
+    display: flex;
+    gap: spacing(3);
+    margin-block: 7rem;
+    @include onTablet {
+      flex-direction: column-reverse;
+      margin-block: 3.5rem;
+    }
+    &-text {
+      flex: 50%;
+      max-width: 50rem;
+    }
+    &-img {
+      margin-right: spacing(4);
+      text-align: right;
+      @include onTablet {
+        text-align: left;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: spacing(1);
+        border: 1px solid rgba(#000, 0.4);
+      }
+      img.illu-menu {
+        max-width: 30rem;
+        position: absolute;
+        z-index: 1;
+        bottom: 50%;
+        right: spacing(-4);
+      }
+      img.illu-console {
+        max-width: 40rem;
+        transform: translateX(25px);
+      }
+    }
+  }
+  .animatedLine-line {
+    background: linear-gradient(transparent, #2ea043, #56d364);
+  }
+}
