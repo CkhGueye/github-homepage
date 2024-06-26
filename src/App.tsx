@@ -3,6 +3,7 @@ import Header from "./layout/header/Header";
 import HeroSection from "./layout/heroSection/HeroSection";
 import ProductivitySection from "./layout/productivitySection/ProductivitySection";
 import CodeSpacesSection from "./layout/spacesSection/CodeSpaces";
+import IncreaseSection from "./layout/didYouKnowSection/IncreaseSection";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <HeroSection />
       <ProductivitySection />
       <CodeSpacesSection />
+      <IncreaseSection />
     </>
   );
 }
