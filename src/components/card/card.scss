@@ -1,0 +1,56 @@
+.card {
+  padding: spacing(5);
+  background-color: rgb(22, 27, 34);
+  border-radius: spacing(2);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+  .column {
+    flex-direction: column;
+    + .card-light {
+      bottom: 40%;
+      right: 43%;
+    }
+  }
+  &-content {
+    display: flex;
+    gap: spacing(5);
+    @include onTablet {
+      flex-direction: column;
+    }
+    & > div {
+      flex: 50%;
+      z-index: 1;
+    }
+  }
+  &-img {
+    border-radius: 1.3rem;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  &-light {
+    position: absolute;
+    bottom: -50%;
+    right: 75%;
+    width: 65rem;
+    height: 65rem;
+    background-color: var(--green);
+    filter: blur(180px);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    mix-blend-mode: soft-light;
+    will-change: transform;
+    @include onTablet {
+      bottom: 35%;
+      right: 60%;
+    }
+  }
+  &:hover {
+    .card-light {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.features {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: spacing(5);
+  }
+  .card {
+    @include onTablet {
+      grid-column: 1/3;
+    }
+    img {
+      max-height: 45rem;
+    }
+    &:nth-child(1) {
+      grid-column: 1/3;
+      .card-img {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        img {
+          width: 100%;
+          height: 25rem;
+          @include onTablet {
+            height: auto;
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      .card-img {
+        margin-right: spacing(-5);
+        margin-bottom: spacing(-5.5);
+      }
+    }
+    &:nth-child(3) {
+      .card-img {
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        translate: -50%;
+        width: 100%;
+        //min-height: 38rem;
+        @include onTablet {
+          position: relative;
+          bottom: spacing(-5);
+        }
+      }
+    }
+  }
+  .animatedLine {
+    &-line {
+      background: linear-gradient(var(--black), #ea6045, #ffa28b);
+    }
+  }
+}

@@ -4,6 +4,7 @@ import HeroSection from "./layout/heroSection/HeroSection";
 import ProductivitySection from "./layout/productivitySection/ProductivitySection";
 import CodeSpacesSection from "./layout/spacesSection/CodeSpaces";
 import IncreaseSection from "./layout/didYouKnowSection/IncreaseSection";
+import FeaturesSection from "./layout/featuresSection/FeaturedSection";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ProductivitySection />
       <CodeSpacesSection />
       <IncreaseSection />
+      <FeaturesSection />
     </>
   );
 }
