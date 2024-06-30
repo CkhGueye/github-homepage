@@ -4,8 +4,13 @@ import imgSrc from "../../assets/editor.png";
 import imgSrc2 from "../../assets/illu-actions.png";
 import imgSrc3 from "../../assets/illu-mobile.png";
 import Card from "../../components/card/Card";
+import AnimatedLine from "../../components/animatedLine/AnimatedLine";
+import { useRef } from "react";
+import useVisibleOnScreen from "../../utils/useVisibleOnScreen";
 
 export default function FeaturesSection() {
+  const lineRef = useRef(null);
+  const visibility = useVisibleOnScreen(lineRef);
   return (
     <section className="features">
       <div className="container">
@@ -47,7 +52,10 @@ export default function FeaturesSection() {
           </div>
         </Card>
       </div>
-      <div style={{ height: "16rem" }} />
+      <div className={`container withline ${visibility}`} ref={lineRef}>
+        <AnimatedLine />
+        <div style={{ height: "16rem" }} />
+      </div>
     </section>
   );
 }
