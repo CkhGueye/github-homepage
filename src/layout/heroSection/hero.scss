@@ -1,5 +1,6 @@
 .hero {
   margin-top: 10rem;
+  overflow: hidden;
   @include onTablet {
     margin-top: unset;
   }
