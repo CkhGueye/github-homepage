@@ -51,3 +51,13 @@
     transition-delay: 500ms;
   }
 }
+
+.reduction {
+  h2,
+  span {
+    color: var(--red);
+  }
+  .animatedLine-line {
+    background: linear-gradient(#ea6045, #ea6045, transparent);
+  }
+}

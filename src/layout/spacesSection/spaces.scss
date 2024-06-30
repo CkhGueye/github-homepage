@@ -3,7 +3,7 @@
     position: relative;
     display: flex;
     gap: spacing(3);
-    margin-block: 7rem;
+    margin-block: 7rem 0;
     @include onTablet {
       flex-direction: column-reverse;
       margin-block: 3.5rem;
