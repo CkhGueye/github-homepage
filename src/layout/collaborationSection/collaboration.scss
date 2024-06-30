@@ -1,0 +1,15 @@
+.collaboration {
+  .animatedLine {
+    &-svgWrapper::before {
+      background-color: var(--red);
+    }
+    &-line {
+      background: linear-gradient(#ffd6cc, #ec6547, #ec6547, var(--black));
+    }
+  }
+  p {
+    span {
+      color: var(--red);
+    }
+  }
+}
