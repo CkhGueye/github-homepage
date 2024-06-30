@@ -5,6 +5,7 @@ type cardProps = {
   children: JSX.Element | JSX.Element[];
   type: "column" | "row";
 };
+
 export default function Card({ children, type }: cardProps) {
   const lightRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -29,21 +30,15 @@ export default function Card({ children, type }: cardProps) {
     }
   }
 
-  const handleMouseOver = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    cardRef.current?.addEventListener("mousemove", () => handleMouseMvt(e));
-  };
-  const handleMouseLeave = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
+  const handleMouseLeave = () => {
     if (!cardRef.current) return false;
     cardRef.current.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
-    cardRef.current.removeEventListener("mousemove", () => handleMouseMvt(e));
   };
 
   return (
     <div
       className="card"
-      onMouseOver={handleMouseOver}
+      onMouseMove={(e) => handleMouseMvt(e)}
       onMouseLeave={handleMouseLeave}
       ref={cardRef}
     >
