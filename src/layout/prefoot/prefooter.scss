@@ -1,0 +1,29 @@
+.prefooter {
+  background-image: url(../../assets/footer-galaxy.webp);
+  text-align: center;
+  .container {
+    max-width: 85rem;
+  }
+  h2 {
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-block: spacing(4);
+    @include onTablet {
+      font-size: 3.5rem;
+      margin-bottom: spacing(2);
+    }
+  }
+  p {
+    font-size: 2rem;
+    margin-bottom: spacing(4);
+    @include onTablet {
+      margin-bottom: spacing(2);
+    }
+  }
+  &-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: spacing(2);
+  }
+}

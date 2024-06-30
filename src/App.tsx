@@ -8,6 +8,7 @@ import FeaturesSection from "./layout/featuresSection/FeaturedSection";
 import CollaborationSection from "./layout/collaborationSection/CollaborationSection";
 import ProjectSpacesSection from "./layout/spacesSection/ProjectSpaces";
 import ReductionSection from "./layout/didYouKnowSection/ReductionSection";
+import PrefooterSection from "./layout/prefoot/Prefooter";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <CollaborationSection />
       <ProjectSpacesSection />
       <ReductionSection />
+      <PrefooterSection />
     </>
   );
 }
