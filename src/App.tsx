@@ -6,6 +6,7 @@ import CodeSpacesSection from "./layout/spacesSection/CodeSpaces";
 import IncreaseSection from "./layout/didYouKnowSection/IncreaseSection";
 import FeaturesSection from "./layout/featuresSection/FeaturedSection";
 import CollaborationSection from "./layout/collaborationSection/CollaborationSection";
+import ProjectSpacesSection from "./layout/spacesSection/ProjectSpaces";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <IncreaseSection />
       <FeaturesSection />
       <CollaborationSection />
+      <ProjectSpacesSection />
     </>
   );
 }

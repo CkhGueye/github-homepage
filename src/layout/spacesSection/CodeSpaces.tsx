@@ -20,8 +20,8 @@ export default function CodeSpacesSection() {
             <Link to="/">Check out GitHub Codespaces</Link>
           </div>
           <div className="content-img">
-            <img src={imgSrc1} className="illu-menu" alt="menu" />
             <img src={imgSrc2} className="illu-console" alt="console" />
+            <img src={imgSrc1} className="illu-menu" alt="menu" />
           </div>
         </div>
       </div>

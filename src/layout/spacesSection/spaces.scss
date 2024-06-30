@@ -23,21 +23,47 @@
         height: auto;
         border-radius: spacing(1);
         border: 1px solid rgba(#000, 0.4);
-      }
-      img.illu-menu {
-        max-width: 30rem;
-        position: absolute;
-        z-index: 1;
-        bottom: 50%;
-        right: spacing(-4);
-      }
-      img.illu-console {
-        max-width: 40rem;
-        transform: translateX(25px);
+
+        &:nth-child(1) {
+          max-width: 40rem;
+          transform: translateX(25px);
+        }
+
+        &:nth-child(2) {
+          max-width: 30rem;
+          position: absolute;
+          z-index: 1;
+          bottom: 50%;
+          right: spacing(-4);
+        }
       }
     }
   }
   .animatedLine-line {
     background: linear-gradient(transparent, #2ea043, #56d364);
+  }
+}
+
+.projectspaces {
+  .content {
+    @include onTablet {
+      width: 100%;
+    }
+  }
+  .content-img {
+    margin-inline: auto 0;
+    transform: translate(0, 0);
+
+    img.illu-project {
+      margin-top: -40%;
+      max-width: 50rem;
+      transform: translate(0, 25px);
+      @include onTablet {
+        max-width: 40rem;
+      }
+    }
+  }
+  .animatedLine-line {
+    background: linear-gradient(transparent, #ea6045, #ea6045);
   }
 }
