@@ -26,6 +26,9 @@ header {
       gap: spacing(1);
       overflow: auto;
     }
+    @include onMobile {
+      margin-block: 0 spacing(6);
+    }
   }
   .logo {
     svg {
@@ -48,7 +51,10 @@ header {
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 45px;
+      padding: 4.5rem;
+      @include onMobile {
+        padding: 2rem;
+      }
       @include hided;
       .sign-in {
         background-color: var(--black);

@@ -23,7 +23,7 @@
     box-shadow: unset;
     @include resetTransform;
     display: none;
-    padding-block: spacing(1);
+    padding: spacing(1);
   }
 
   .extra {

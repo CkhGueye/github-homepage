@@ -37,6 +37,9 @@ body {
       max-width: 85%;
     }
   }
+  @include onMobile {
+    padding-inline: spacing(1) spacing(2);
+  }
 }
 
 a {
@@ -71,6 +74,12 @@ a {
 }
 
 .illustration {
+  picture {
+    display: inline-block;
+    @include onMobile {
+      margin-right: -0.8rem;
+    }
+  }
   img {
     width: 100%;
     height: auto;
@@ -81,5 +90,11 @@ a {
       0 30px 30px rgba(0, 0, 0, 0.14), 0 15px 15px rgba(0, 0, 0, 0.12),
       0 10px 8px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.08),
       0 2px 2px rgba(0, 0, 0, 0.06);
+  }
+}
+
+@include onMobile {
+  div[style="height: 12rem;"] {
+    height: 6rem !important;
   }
 }

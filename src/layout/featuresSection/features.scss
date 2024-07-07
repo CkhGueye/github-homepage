@@ -3,6 +3,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: spacing(5);
+    @include onMobile {
+      gap: spacing(2.5);
+    }
   }
   .card {
     @include onTablet {

@@ -6,7 +6,7 @@
     margin-block: 7rem 0;
     @include onTablet {
       flex-direction: column-reverse;
-      margin-block: 3.5rem;
+      margin-block: 3.5rem 0;
     }
     &-text {
       flex: 50%;

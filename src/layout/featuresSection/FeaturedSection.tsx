@@ -54,7 +54,7 @@ export default function FeaturesSection() {
       </div>
       <div className={`container withline ${visibility}`} ref={lineRef}>
         <AnimatedLine />
-        <div style={{ height: "16rem" }} />
+        <div style={{ height: "12rem" }} />
       </div>
     </section>
   );

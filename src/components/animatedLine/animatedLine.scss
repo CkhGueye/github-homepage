@@ -12,6 +12,12 @@
       padding-left: spacing(2);
     }
   }
+  @include onMobile {
+    width: 2rem;
+    & + .content {
+      padding-left: spacing(1);
+    }
+  }
   &-img {
     align-self: flex-start;
     z-index: -1;

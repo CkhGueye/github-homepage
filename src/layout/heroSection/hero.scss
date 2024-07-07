@@ -98,6 +98,9 @@
       @include onTablet {
         translate: 0.7rem;
       }
+      @include onMobile {
+        translate: -0.3rem;
+      }
     }
     &-svgWrapper {
       transform: unset;
